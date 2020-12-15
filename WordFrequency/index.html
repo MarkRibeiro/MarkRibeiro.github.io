@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="WordFrequency.js" defer></script>
+    </head>
+    <body>
+        <label id="file-label">Arquivo do texto:</label>
+        <input type="file" id="file-input" class="custom-file-input" />
+        <label id="list-label">Arquivo do filtro de palavras:</label>
+        <input type="file" id="list-input" class="custom-list-input" />
+        <br/>
+        <br/>
+        <br/>
+        <button id="compute" class="compute-button-style">Computar</button>
+        <pre style="font-size: 15px" id="file-contents"></pre>
+        
+        <script type="text/javascript">
+            let isFirefox = navigator.userAgent.search("Firefox") != -1;
+            if (!isFirefox) {
+                document.getElementById("file-label").style.display = "none";
+                document.getElementById("list-label").style.display = "none";
+            }
+        </script>
+    </body>
+</html>
